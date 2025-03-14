@@ -18,6 +18,8 @@ static inline long my_getchar(int fd, char* c) {
     return my_syscall(SYS_READ, fd, c, 1, 0, 0, 0);
 }
 
+
+// doesn't work yet, I think
 static inline ulong my_read(int fd, char* buf, ulong bufsize) {
     if (bufsize == 0 || !buf) { return -1L; }
 
